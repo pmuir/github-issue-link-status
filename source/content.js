@@ -18,7 +18,7 @@ function anySelector(selector) {
 }
 
 function escapeForGql(repo) {
-	return repo.replace(/[./-]/g, '_');
+	return '_' + repo.replace(/[./-]/g, '_');
 }
 
 function query(q) {
@@ -40,8 +40,8 @@ function buildGQL(links) {
 		repoIssueMap.set(repo, issues);
 	}
 	return query(
-		join(repoIssueMap, ([repo, issues]) => `
-			repo${escapeForGql(repo)}: repository(
+		join(repoIssueMap, ([repo, issues]) => 
+			escapeForGql(repo) + `: repository(
 				owner: "${repo.split('/')[0]}",
 				name: "${repo.split('/')[1]}"
 			) {${join(issues, ([id]) => `
@@ -66,7 +66,7 @@ function getNewLinks() {
 			.js-issue-title,
 			.markdown-body
 		)
-		:any(
+		a[href^="${location.origin}"]:any(
 			a[href*="/pull/"],
 			a[href*="/issues/"]
 		):not(.ILS)
@@ -104,7 +104,7 @@ async function apply() {
 
 	for (const {link, repo, id} of links) {
 		try {
-			const item = data['repo' + escapeForGql(repo)]['id' + id];
+			const item = data[escapeForGql(repo)]['id' + id];
 			const state = item.state.toLowerCase();
 			const type = item.__typename.toLowerCase();
 			link.classList.add(stateColorMap[state]);
