@@ -1,5 +1,5 @@
 {
-  "repository": "fregante/github-issue-link-status",
+  "repository": "pmuir/github-issue-link-status",
   "scripts": {
     "build": "webpack --mode production",
     "release": "npm run build && npm run update-version && npm run release-amo && npm run release-cws",

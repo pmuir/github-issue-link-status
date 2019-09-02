@@ -1,16 +1,16 @@
 {
-  "name": "GitHub Issue Link Status",
+  "name": "GitHub Issue Link Status for JIRA",
   "version": "1.0.0",
   "manifest_version": 2,
   "description": "Colorize issue and PR links to see their status (open, closed, merged)",
-  "author": "Federico Brigante",
-  "homepage_url": "https://github.com/fregante/github-issue-link-status",
+  "author": "Pete Muir",
+  "homepage_url": "https://github.com/pmuir/github-issue-link-status",
   "icons": {
     "128": "icon.png"
   },
   "applications": {
     "gecko": {
-      "id": "issue-link-status@bfred.it",
+      "id": "issue-link-status@bleepbleep.org.uk",
       "strict_min_version": "52.0"
     }
   },

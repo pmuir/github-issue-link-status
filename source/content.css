@@ -9,3 +9,83 @@
 .ILS + .ILS {
 	margin-left: 0.1em;
 }
+
+.closed .closed:hover {
+  text-decoration: line-through;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.text-red {
+  color: #cb2431;
+}
+
+.text-green {
+  color: #28a745;
+}
+
+.text-purple {
+  color: #6f42c1;
+}
+
+.octicon-issue-closed {
+  fill: #cb2431;
+  color: #cb2431;
+  strike
+}
+
+.octicon-issue-reverted {
+  fill: #cb2431;
+  color: #cb2431;
+}
+
+.octicon-issue-opened {
+  fill: #28a745;
+  color: #28a745;
+}
+
+.octicon-git-merge {
+  fill: #6f42c1;
+  color: #6f42c1;
+}
+
+.label {
+    border-radius: 2px;
+    box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
+    font-size: 12px;
+    font-weight: 600;
+    height: 20px;
+    line-height: 15px;
+    padding: .15em 4px;
+    margin: 2px;
+}
+
+.avatar {
+  border-radius: 3px;
+  display: inline-block;
+  line-height: 1;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-top: 3px;
+}
+
+.assigned {
+  float: right;
+  margin: 0 5px 0 0 ;
+}
+
+.github-issue {
+  line-height: 22px;
+  color: black;
+}
+
+.github-issue:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.labels {
+  margin-right: 27px;
+}
