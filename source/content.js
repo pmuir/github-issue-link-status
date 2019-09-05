@@ -161,7 +161,8 @@ function getNewLinks() {
 	const newLinks = new Set();
 	const links = document.querySelectorAll(anySelector(`
 		:any(
-			.mod-content
+      .mod-content,
+      #jira-frontend
 		)
 		a[href^="https://github.com/"]:any(
 			a[href*="/pull/"],
